@@ -8,7 +8,7 @@ namespace URI_1041{
         {
             double x,y;
 
-            string []vet = Console.ReadLine().Split(' ');
+            string [] vet = Console.ReadLine().Split(' ');
             x = double.Parse(vet[0],CultureInfo.InvariantCulture);
             y = double.Parse(vet[1],CultureInfo.InvariantCulture);
 
@@ -21,20 +21,18 @@ namespace URI_1041{
             else if (y == 0.0){
                 Console.WriteLine("Eixo Y");
             }
-
             else if (x > 0.0 && y > 0.0){
                 Console.WriteLine("Q1");
             }
-            else if (x >0.0 && y <0.0){
-                Console.WriteLine("Q4");
-            }
-            else if (x < 0.0 && y > 0.0){
+            else if (x < 0.0 && y >0.0){
                 Console.WriteLine("Q2");
             }
-            else {
+            else if (x < 0.0 && y < 0.0){
                 Console.WriteLine("Q3");
-            }            
-
+            }
+            else {
+                Console.WriteLine("Q4");
+            }    
         }
     }
 }
